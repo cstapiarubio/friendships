@@ -34,6 +34,13 @@ insert into friendships(user_id, friend_id, created_at, updated_at)
 values (6, 4, now(), null);
 
 insert into friendships(user_id, friend_id, created_at, updated_at)
-values (6, 5, now(), null);*/
+values (6, 5, now(), null);
 
-select * from friendships;
+select users.first_name, users.last_name, users2.first_name as friend_nombre, users2.last_name as friend_apellido
+from users
+inner join friendships
+on users.id = friendships.user_id
+inner join users as users2 
+on friend_id = users2.id
+where users.id =2
+order by friend_apellido asc;*/
