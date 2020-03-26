@@ -43,4 +43,7 @@ on users.id = friendships.user_id
 inner join users as users2 
 on friend_id = users2.id
 where users.id =2
-order by friend_apellido asc;*/
+order by friend_apellido asc;
+
+delete from friendships 
+where friendships.id = 5;*/
