@@ -12,3 +12,8 @@ on users.id = friendships.user_id
 inner join users as users2 
 on friend_id = users2.id
 where friend_id =4;*/
+
+select count(friendships.id) as amistades
+from users
+inner join friendships
+on users.id = friendships.user_id;
